@@ -35,14 +35,16 @@ export const ttfToWoff = () => {
 
 export const fontsStyle = () => {
 	let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`;
+
 	fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
 		if (fontsFiles) {
+
 			if (!fs.existsSync(fontsFile)) {
 				fs.writeFile(fontsFile, '', cb);
 				let newFileOnly;
 				for (let i = 0; i < fontsFiles.length; i++) {
 					let fontFileName = fontsFiles[i].split('.')[0];
-					if (newFileOnly !== fontFileName) {
+					if (newFileOnly !== fontFileName && fontsFiles[i].split('.')[1] !== 'woff') {
 						let fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName;
 						let fontWeight = fontFileName.split('-')[1] ? fontFileName.split('-')[1] : fontFileName;
 						if (fontWeight.toLowerCase() === 'thin') {
