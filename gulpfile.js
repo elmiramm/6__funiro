@@ -34,8 +34,6 @@ function watcher() {
 	gulp.watch(path.watch.images, images);
 }
 
-export { svgsprite }
-
 // Последовательная обработка шрифтов 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
@@ -46,8 +44,9 @@ const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 
 //Экспорт сценариев 
-export { dev }
-export { build }
+export { dev }  //npm run dev
+export { build } //npm run build
+export { svgsprite } //npm run svgsprite
 
 //Выполнение сценария по умолчанию
 gulp.task('default', dev);
