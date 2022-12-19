@@ -1,3 +1,5 @@
+@import "fonts.scss";
+
 *,
 *::after,
 *::before {
@@ -10,8 +12,12 @@ body {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 22px;
-	color: black;
-	background-color: tomato;
+	background-color: black;
+}
+
+p {
+	font-family: Gilroy;
+	color: white;
 }
 
 a {
@@ -38,3 +44,7 @@ ul {
 img {
 	object-fit: cover;
 }
+
+
+
+
