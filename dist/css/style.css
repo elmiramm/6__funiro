@@ -5,7 +5,6 @@
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
   font-family: Gilroy;
   font-display: swap;
@@ -13,7 +12,6 @@
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: Gilroy;
   font-display: swap;
@@ -21,12 +19,10 @@
   font-weight: 300;
   font-style: normal;
 }
-
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -59,6 +55,5 @@ ul {
 }
 
 img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
