@@ -167,12 +167,17 @@ ul {
   list-style: none;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 img {
   object-fit: cover;
 }
 
 .container {
-  max-width: "1270px";
+  max-width: 1270px;
   padding: 0 15px;
   margin: 0 auto;
 }

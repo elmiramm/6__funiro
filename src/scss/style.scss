@@ -10,8 +10,8 @@ $darkGrayColorGray3: #898989;
 $grayColorGray2: #616161;
 $orangeColorPrimary: #E89F71;
 
-$maxWidth: "1440px";
-$maxWidthContainer:"1270px";
+$maxWidth: 1440px;
+$maxWidthContainer: 1270px;
 //------Vars-End------ 
 
 *,
@@ -46,6 +46,11 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+button {
+	background-color: transparent;
+	border: none;
 }
 
 img {
