@@ -1,4 +1,18 @@
 @import "fonts.scss";
+@import "icons.scss";
+
+// ------Vars------ 
+$fontFamily: "Gilroy";
+$fontSize: 16;
+
+$mainColorGray1: #3A3A3A;
+$darkGrayColorGray3: #898989;
+$grayColorGray2: #616161;
+$orangeColorPrimary: #E89F71;
+
+$maxWidth: "1440px";
+$maxWidthContainer:"1270px";
+//------Vars-End------ 
 
 *,
 *::after,
@@ -7,12 +21,10 @@
 }
 
 body {
-	// font-family: 'Comfortaa', cursive;
-	font-family: 'Inter', sans-serif;
+	font-family: $fontFamily;
 	font-weight: 400;
-	font-size: 18px;
-	line-height: 22px;
-	background-color: black;
+	font-size: $fontSize;
+	line-height: 1.5;
 }
 
 a {
@@ -38,6 +50,12 @@ ul {
 
 img {
 	object-fit: cover;
+}
+
+.container {
+	max-width: $maxWidthContainer;
+	padding: 0 15px;
+	margin: 0 auto;
 }
 
 
