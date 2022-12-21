@@ -28,6 +28,8 @@ body {
 	font-size: $fontSize;
 	line-height: 1.5;
 	color: $mainColorGray1;
+
+	background-color: #F9F1E7;
 }
 
 a {
@@ -69,6 +71,7 @@ img {
 
 @import "header.scss";
 @import "menu.scss";
+@import "search-form.scss";
 
 
 

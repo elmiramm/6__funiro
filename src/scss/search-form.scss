@@ -1,0 +1,28 @@
+.search-form {
+	max-width: 473px;
+	&__icon {
+		display: none;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+
+		background-color: #fff;
+	}
+	&__btn {
+		flex: 0 0 45px;
+		height: 45px;
+
+		font-size: 15px;
+		color: #333;
+	}
+	&__input {
+		width: 100%;
+		padding-right: 20px;
+
+		font-size: 14px;
+		color: $darkGrayColorGray3;
+
+		border: none;
+	}
+}
