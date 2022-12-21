@@ -1,13 +1,44 @@
 .search-form {
 	max-width: 473px;
+	&.active {
+		.search-form__item {
+			opacity: 1;
+			visibility: visible;
+			top: 100%;
+
+		}
+		.search-form__icon {
+			color: $orangeColorPrimary;
+		}
+	}
 	&__icon {
-		display: none;
+		position: relative;
+		z-index: 5;
+		font-size: 22px;
+		color: #262F56;
+		@media (min-width: 991.98px) {
+			display: none;
+		}
+		@media (max-width: 320px) {
+			font-size: 20px;
+		}
 	}
 	&__item {
 		display: flex;
 		align-items: center;
 
 		background-color: #fff;
+		@media (max-width: 991.98px) {
+			box-shadow: 0 0 5px rgba(212, 209, 205, 0.3);
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: -100%;
+			z-index: 5;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+		}
 	}
 	&__btn {
 		flex: 0 0 45px;

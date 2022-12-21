@@ -20,17 +20,17 @@
   font-style: normal;
 }
 @font-face {
-  font-family: Gilroy;
+  font-family: Poppins;
   font-display: swap;
-  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff");
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: Poppins;
+  font-family: Gilroy;
   font-display: swap;
-  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
@@ -50,8 +50,8 @@
 @font-face {
   font-family: Poppins;
   font-display: swap;
-  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
@@ -204,17 +204,35 @@ img {
   align-items: center;
   padding: 5px 0;
   min-height: 125px;
+  position: relative;
+}
+@media (max-width: 991.98px) {
+  .header__body {
+    min-height: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .header__body {
+    min-height: 60px;
+  }
 }
 .header__main {
   display: flex;
   align-items: center;
   flex: 0 0 39.8387096774%;
 }
+@media (max-width: 991.98px) {
+  .header__main {
+    flex: 1 1 auto;
+  }
+}
 .header__logo {
   font-size: 24px;
   line-height: 1.21;
   font-weight: 700;
   color: #000;
+  position: relative;
+  z-index: 5;
 }
 .header__menu {
   flex: 0 1 420px;
@@ -237,7 +255,42 @@ img {
     padding-right: 15px;
   }
 }
+@media (max-width: 320px) {
+  .header__search {
+    padding-right: 12px;
+  }
+}
 
+@media (max-width: 767.98px) {
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: -100%;
+    background-color: #fff;
+    transition: left 0.3s ease;
+    padding: 70px 15px 30px 15px;
+  }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    left: -100%;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+    transition: left 0.3s ease;
+  }
+  .menu__body._active {
+    left: 0;
+  }
+  .menu__body._active::before {
+    left: 0;
+  }
+}
 @media (min-width: 767.98px) {
   .menu__list {
     display: flex;
@@ -284,14 +337,37 @@ img {
     color: #E89F71;
   }
 }
+@media (max-width: 767.98px) {
+  .menu__item {
+    margin: 0 0 15px 0;
+  }
+  .menu__item:last-child {
+    margin-bottom: 0;
+  }
+}
 .menu__link {
   font-weight: 500;
   transition: color 0.3s ease;
+}
+@media (max-width: 767.98px) {
+  .menu__link {
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
 .menu__arrow {
   margin-left: 8px;
   font-size: 12px;
   transition: all 0.3s ease;
+}
+@media (max-width: 767.98px) {
+  .menu__arrow {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .menu__arrow._active {
+    transform: rotate(-180deg);
+  }
 }
 .menu__sublist {
   flex: 1 1 100%;
@@ -310,26 +386,81 @@ img {
     position: absolute;
     left: 0;
     top: 100%;
+    z-index: 5;
+  }
+}
+@media (max-width: 767.98px) {
+  .menu__sublist {
+    margin: 10px -15px 0 -15px;
   }
 }
 .menu__sub-item:not(:last-child) {
   margin-bottom: 5px;
 }
+@media (max-width: 767.98px) {
+  .menu__sub-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 .menu__sub-link {
   color: #fff;
   line-height: 1.2;
+}
+@media (any-hover: hover) {
+  .menu__sub-link:hover {
+    text-decoration: underline;
+  }
+}
+@media (max-width: 767.98px) {
+  .menu__sub-link {
+    font-size: 18px;
+  }
 }
 
 .search-form {
   max-width: 473px;
 }
+.search-form.active .search-form__item {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+.search-form.active .search-form__icon {
+  color: #E89F71;
+}
 .search-form__icon {
-  display: none;
+  position: relative;
+  z-index: 5;
+  font-size: 22px;
+  color: #262F56;
+}
+@media (min-width: 991.98px) {
+  .search-form__icon {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .search-form__icon {
+    font-size: 20px;
+  }
 }
 .search-form__item {
   display: flex;
   align-items: center;
   background-color: #fff;
+}
+@media (max-width: 991.98px) {
+  .search-form__item {
+    box-shadow: 0 0 5px rgba(212, 209, 205, 0.3);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -100%;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
 }
 .search-form__btn {
   flex: 0 0 45px;
@@ -364,6 +495,11 @@ img {
     gap: 15px;
   }
 }
+@media (max-width: 320px) {
+  .actions-header {
+    gap: 12px;
+  }
+}
 .actions-header__item--likes {
   font-size: 24px;
   color: #262F56;
@@ -372,6 +508,11 @@ img {
 @media (any-hover: hover) {
   .actions-header__item--likes:hover {
     color: #E89F71;
+  }
+}
+@media (max-width: 320px) {
+  .actions-header__item--likes {
+    font-size: 20px;
   }
 }
 .actions-header__item--user {
@@ -421,6 +562,67 @@ img {
   background-color: #E89F71;
   color: #fff;
   font-size: 12px;
+}
+@media (max-width: 320px) {
+  .cart-header__icon {
+    font-size: 20px;
+  }
+}
+
+.icon-menu {
+  margin-left: 15px;
+  display: none;
+}
+@media (max-width: 768px) {
+  .icon-menu {
+    position: relative;
+    display: block;
+    flex: 0 0 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+}
+@media (max-width: 768px) and (max-width: 320px) {
+  .icon-menu {
+    flex: 0 0 25px;
+  }
+}
+@media (max-width: 768px) {
+  .icon-menu span {
+    transition: all 0.3s ease;
+    top: calc(50% - 1px);
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .icon-menu span:first-child {
+    top: 0px;
+  }
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .icon-menu._active span {
+    transform: scale(0);
+  }
+  .icon-menu._active span:first-child {
+    transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+  .icon-menu._active span:last-child {
+    transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+  }
+}
+@media (max-width: 320px) {
+  .icon-menu {
+    margin-left: 12px;
+  }
 }
 
 main {
