@@ -37,6 +37,27 @@
 				}
 			}
 		}
+		@media (min-width: 767.98px) {
+			&._hover {
+				.menu__sublist {
+					opacity: 1;
+					visibility: visible;
+					transform: translate(0px, 0px);
+
+					pointer-events: auto;
+				}
+
+				.menu__arrow {
+					transform: rotate(-180deg);
+				}
+
+				.menu__arrow,
+				.menu__link {
+					color: $orangeColorPrimary;
+				}
+			}
+		}
+
 	}
 
 	&__link {

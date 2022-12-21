@@ -250,6 +250,21 @@ img {
     color: #E89F71;
   }
 }
+@media (min-width: 767.98px) {
+  .menu__item._hover .menu__sublist {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+    pointer-events: auto;
+  }
+  .menu__item._hover .menu__arrow {
+    transform: rotate(-180deg);
+  }
+  .menu__item._hover .menu__arrow,
+  .menu__item._hover .menu__link {
+    color: #E89F71;
+  }
+}
 .menu__link {
   font-weight: 500;
   transition: color 0.3s ease;
