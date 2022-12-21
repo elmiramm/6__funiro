@@ -20,7 +20,9 @@ $maxWidthContainer: 1270px;
 	box-sizing: border-box;
 }
 
+html,
 body {
+	height: 100%;
 	margin: 0;
 
 	font-family: $fontFamily;
@@ -63,10 +65,21 @@ img {
 	object-fit: cover;
 }
 
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
 .container {
 	max-width: $maxWidthContainer;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+.page {
+	flex: 1 1 auto;
+	background-color: aquamarine;
+	min-height: 150px;
 }
 
 @import "header.scss";
@@ -76,11 +89,26 @@ img {
 @import "cart-header.scss";
 @import "icon-menu.scss";
 
-
-
-main{
-	background-color: aquamarine;
+.footer-title {
+	font-size: 24px;
+	line-height: 1.21;
+	font-weight: 700;
+	color: #000;
+	@media (max-width: 767.98px) {
+		font-size: 20px;
+	}
+	@media (max-width: 479.98px) {
+		font-size: 20px;
+	}
 }
+
+@import "footer.scss";
+@import "contacts-footer.scss";
+@import "menu-footer.scss";
+@import "subscribe.scss";
+
+
+
 
 
 

@@ -1,0 +1,24 @@
+.contacts-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	&__item {
+		display: inline-flex;
+		align-items: center;
+		line-height: 1.5;
+		color: $darkGrayColorGray3;
+		transition: color 0.3s ease;
+		&:not(.icon-location)::before {
+			margin-right: 8px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orangeColorPrimary;
+			}
+		}
+	}
+	
+}
