@@ -3,7 +3,7 @@
 
 // ------Vars------ 
 $fontFamily: "Gilroy";
-$fontSize: 16;
+$fontSize: 16px;
 
 $mainColorGray1: #3A3A3A;
 $darkGrayColorGray3: #898989;
@@ -21,10 +21,13 @@ $maxWidthContainer: 1270px;
 }
 
 body {
+	margin: 0;
+
 	font-family: $fontFamily;
 	font-weight: 400;
 	font-size: $fontSize;
 	line-height: 1.5;
+	color: $mainColorGray1;
 }
 
 a {
@@ -49,6 +52,7 @@ ul {
 }
 
 button {
+	padding: 0;
 	background-color: transparent;
 	border: none;
 }
@@ -61,6 +65,15 @@ img {
 	max-width: $maxWidthContainer;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+@import "header.scss";
+@import "menu.scss";
+
+
+
+main{
+	background-color: aquamarine;
 }
 
 
