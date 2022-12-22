@@ -32,6 +32,10 @@
 		flex: 0 0 494 / 1240 * 100%;
 		margin-bottom: 80px;
 		align-self: flex-start;
+		@media (max-width: 991.98px) {
+			margin: 0 -15px;
+		}
+
 	}
 	&__slider {
 		flex: 1 1 auto;
