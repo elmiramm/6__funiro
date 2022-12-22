@@ -30,8 +30,6 @@ body {
 	font-size: $fontSize;
 	line-height: 1.5;
 	color: $mainColorGray1;
-
-	background-color: #F9F1E7;
 }
 
 a {
@@ -61,8 +59,36 @@ button {
 	border: none;
 }
 
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15px;
+	text-align: center;
+	transition: all 0.3s ease;
+	min-height: 48px;
+}
+
 img {
 	object-fit: cover;
+}
+.ibg{
+
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	}
+	
+.ibg img{
+	
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .wrapper {
@@ -78,8 +104,6 @@ img {
 }
 .page {
 	flex: 1 1 auto;
-	background-color: aquamarine;
-	min-height: 150px;
 }
 
 @import "header.scss";
@@ -88,6 +112,23 @@ img {
 @import "actions-header.scss";
 @import "cart-header.scss";
 @import "icon-menu.scss";
+
+
+// ------Swiper------ 
+@import "../../node_modules/swiper/swiper-vars.scss";
+@import "../../node_modules/swiper/swiper.scss";
+
+.swiper {
+	margin-right: 0;
+	margin-left: 0;
+}
+// ------Swiper-End------ 
+
+@import "main-slider.scss";
+@import "content-main.scss";
+@import "slider-arrows.scss";
+@import "slider-main.scss";
+@import "controls-slider-main.scss";
 
 .footer-title {
 	font-size: 24px;

@@ -1,0 +1,45 @@
+.main-slider {
+	background-color: #FCF8F3;
+	&__container {
+		position: relative;
+		@media (min-width: 991.98px) {
+			&::before {
+				content: "";
+				background-color: #F9F1E7;
+				position: absolute;
+				top: 0;
+				right: 376px;
+				width: 100vw;
+				height: 100%;
+			}
+		}
+	}
+	&__body {
+		padding-top: 125px;
+		position: relative;
+		z-index: 2;
+		@media (max-width: 991.98px) {
+			padding-top: 80px;
+		}
+		@media (max-width: 767.98px) {
+			padding-top: 60px;
+		}
+		@media (min-width: 991.98px) {
+			display: flex;
+		}
+	}
+	&__content {
+		flex: 0 0 494 / 1240 * 100%;
+		margin-bottom: 80px;
+		align-self: flex-start;
+	}
+	&__slider {
+		flex: 1 1 auto;
+		min-width: 0;
+		align-self: flex-end;
+
+		@media (min-width: 991.98px) {
+			padding-left: 32px;
+		}
+	}
+}

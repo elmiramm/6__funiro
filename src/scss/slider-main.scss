@@ -1,0 +1,74 @@
+.slider-main{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	&__controls {
+		align-self: stretch;
+		margin-bottom: 20px;
+	}
+	&__body {
+		overflow: visible;
+		@media (min-width: 991.98px) {
+			width: 934px;
+		}
+	}
+	&__slide {
+		position: relative;
+	}
+	&__img {
+		padding: 0 0 59.1% 0;	
+	}
+	&__content {
+		min-width: 295px;
+		max-height: 300px;
+		overflow: auto;
+
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		padding: 24px;
+		background-color: rgba($color: #fff, $alpha: 0.72);
+		@media (min-width: 767.98px) {
+			position: absolute;
+			min-width: 246px;
+			margin-bottom: 40px;
+			right: 40px;
+			bottom: 40px;}
+		@supports ((-webkit-background-filter: blur(32px))or(background-filter: blur(32px))) {
+				background-color: rgba($color: #fff, $alpha: 0.72);
+				background-filter: blur(32px);
+		}
+	}
+	&__title {
+		font-size: 28px;
+		line-height: 1.2;
+		font-weight: 600;
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+		
+	}
+
+	&__text {
+		font-weight: 500;
+		color: $darkGrayColorGray3;
+		
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__price {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+
+		font-size: 20px;
+		font-weight: 600;
+		&::before {
+			margin-left: 10px;
+			font-size: 24px;
+		}
+	}
+}

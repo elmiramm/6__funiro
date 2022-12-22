@@ -1,0 +1,41 @@
+.slider-arrows {
+	display: grid;
+	grid-template-columns: repeat(2, 48px);
+	column-gap: 8px;
+}
+.slider-arrow {
+	height: 48px;
+	font-size: 16px;
+	color: $orangeColorPrimary;
+	background-color: rgba($color: $orangeColorPrimary, $alpha: 0.3);
+	border-radius: 50%;
+	cursor: pointer;
+
+	transition: all 0.3s ease;
+	&--prev{
+		&::before {
+			transform: rotate(90deg);
+		}
+		
+	}
+	&--next{
+		&::before {
+			transform: rotate(-90deg);
+		}
+		
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: rgba($color: $orangeColorPrimary, $alpha: 1);
+			color: #fff;
+		}
+	}
+	&--white {
+		background-color: #fff;
+		box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
+		&:hover {
+			background-color: $orangeColorPrimary;
+			color: #fff;
+		}
+	}
+}

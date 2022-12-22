@@ -1,15 +1,37 @@
 import * as flsFunctions from "./modules/functions.js";
 import { spoilers } from "./modules/spoilers.js";
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Parallax } from 'swiper';
+
 
 flsFunctions.isWebp();
+flsFunctions.ibg();
 spoilers();
 
+
 // init Swiper:
-const swiper = new Swiper('.swiper', {
-	// configure Swiper to use modules
-	modules: [Navigation, Pagination],
-});
+Swiper.use([Navigation, Pagination, Parallax]);
+if (document.querySelector('.slider-main__body')) {
+	const swiper = new Swiper('.slider-main__body', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 32,
+		watchOverflow: true,
+		speed: 800,
+		loop: true,
+		loopAdditionalSlides: 5,
+		preloadImage: false,
+		parallax: true,
+		pagination: {
+			el: '.controls-slider-main__dots',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.slider-main .slider-arrow--next',
+			prevEl: '.slider-main .slider-arrow--prev',
+		},
+	})
+}
 
 window.onload = function () {
 	document.addEventListener('click', documentActions);
@@ -43,7 +65,6 @@ window.onload = function () {
 			const menuBody = document.querySelector('.menu__body');
 			menuBody.classList.toggle('_active');
 			console.log(menuBody);
-
 		}
 	}
 
