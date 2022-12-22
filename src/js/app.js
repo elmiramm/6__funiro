@@ -1,9 +1,10 @@
 import * as flsFunctions from "./modules/functions.js";
 import { spoilers } from "./modules/spoilers.js";
+import Swiper, { Navigation, Pagination } from 'swiper';
+
 flsFunctions.isWebp();
 spoilers();
 
-import Swiper, { Navigation, Pagination } from 'swiper';
 // init Swiper:
 const swiper = new Swiper('.swiper', {
 	// configure Swiper to use modules
