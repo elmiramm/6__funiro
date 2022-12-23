@@ -214,6 +214,7 @@ img {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .container {
@@ -237,7 +238,7 @@ img {
   top: 0;
   left: 0;
   z-index: 50;
-  width: 100vw;
+  width: 100%;
 }
 .header__body {
   display: flex;
@@ -1035,6 +1036,7 @@ img {
 @media (max-width: 991.98px) {
   .slider-main__body {
     margin: 0 -15px;
+    overflow: hidden;
   }
 }
 .slider-main__slide {

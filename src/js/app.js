@@ -67,7 +67,6 @@ window.onload = function () {
 
 			const menuBody = document.querySelector('.menu__body');
 			menuBody.classList.toggle('_active');
-			console.log(menuBody);
 		}
 	}
 
