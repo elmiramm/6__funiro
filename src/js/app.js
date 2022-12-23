@@ -1,6 +1,9 @@
 import * as flsFunctions from "./modules/functions.js";
 import { spoilers } from "./modules/spoilers.js";
 import Swiper, { Navigation, Pagination, Parallax } from 'swiper';
+import { DynamicAdapt } from "./modules/dynamic-adapt.js";
+
+DynamicAdapt();
 
 
 flsFunctions.isWebp();
