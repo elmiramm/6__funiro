@@ -1,0 +1,33 @@
+.actions-product {
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@media (max-width: 280.98px) {
+		max-width: 89%;
+		}
+	}
+
+	&__button {
+		flex: 1 1 100%;
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		transition: color 0.3s ease;
+		&::before {
+			margin-right: 24px;
+			font-size: 16px;
+		}
+		@media (any-hover: hover) {
+			color: #fff;
+			&:hover {
+				color: $orangeColorPrimary;
+			}
+		}
+	}
+}

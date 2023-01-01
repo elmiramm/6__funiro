@@ -1,0 +1,37 @@
+.products {
+	margin-bottom: 44px;
+	@media (max-width: 767.98px) {
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		margin-bottom: 32px;
+	}
+
+	&__items {
+		display: grid;
+		gap: 32px;
+		grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+		@media (max-width: 280px) {
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 0;
+		}
+	}
+	&__item {
+		@media (max-width: 280px) {
+		
+			margin: 0 -15px;
+		}
+	}
+
+	&__footer {
+		padding-top: 32px;
+		text-align: center;
+	}
+
+	&__more {
+		border: 1px solid $orangeColorPrimary;
+		min-width: 245px;
+	}
+	
+}

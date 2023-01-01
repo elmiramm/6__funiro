@@ -1,0 +1,133 @@
+.item-product {
+	display: flex;
+	flex-direction: column;
+
+	background-color: #F4F5F7;
+
+	position: relative;
+
+	@media (any-hover: hover) {
+		&:hover {
+			.item-product__actions {
+				opacity: 1;
+				visibility: visible;
+			}
+			
+		}
+	}
+
+	&__labels {
+		position: absolute;
+		z-index: 2;
+
+		display: flex;
+		flex-direction: column;
+
+		right: 24px;
+		top: 24px;
+		@media (max-width: 767.98px) {
+			right: 15px;
+			top: 15px;
+		}
+		@media (max-width: 280.98px) {
+			right: 45px;
+			top: 15px;
+		}
+	}
+
+	&__label {
+		flex: 0 0 48px;
+		width: 48px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		font-weight: 500;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+
+		&--sale {
+			background-color: #E97171;
+		}
+
+		&--new {
+			background-color: #2EC1AC;
+		}
+	}
+
+	&__image {
+		padding-bottom: 301px / 285px * 100%;
+	}
+
+	&__body {
+		flex: 1 1 auto;
+		padding: 16px 16px 30px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__content {
+		flex: 1 1 auto;
+	}
+
+	&__title {
+		font-size: 24px;
+		margin-bottom: 8px;
+		@media (max-width: 767.98px) {
+			font-size: 20px;
+			line-height: 1.2;
+		}
+	}
+
+	&__text {
+		color: $darkGrayColorGray3;
+		margin-bottom: 8px;
+	}
+
+	&__prices {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		line-height: 1.5;
+	}
+
+	&__price {
+		font-size: 20px;
+		font-weight: 600;
+
+		@media (max-width: 767.98px) {
+			font-size: 16px;
+		}
+		&--old {
+			font-size: 16px;
+			text-decoration: line-through;
+			font-weight: normal;
+			margin-left: 16px;
+			color: #B0B0B0;
+		}
+	}
+
+	&__actions {
+		@media (any-hover: none) {
+			padding-top: 15px;
+		}
+		@media (any-hover: hover) {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: rgba($color: $mainColorGray1, $alpha: 0.74);
+			z-index: 3;
+			transition: all 0.3s ease;
+		}
+	}
+}
