@@ -1,0 +1,45 @@
+.cart-list {
+	overflow: auto;
+	max-height: 200px;
+	&__image {
+		flex: 0 0 100px;
+		height: 100px;
+	}
+	&__item {
+		display: flex;
+		align-items: flex-start;
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+	&__body {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 10px;
+	}
+
+	&__title {
+		color: inherit;
+		font-weight: 600;
+		transition: color 0.3s ease;
+		margin-bottom: 5px;
+		&:hover {
+			color: $orangeColorPrimary;
+		}
+	}
+	&__quantity {
+		font-size: 14px;
+		margin-bottom: 14px;
+	}
+	&__delete {
+		color: red;
+		font-size: 14px;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
