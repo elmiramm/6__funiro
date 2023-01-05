@@ -1393,6 +1393,10 @@ img {
   border: 1px solid #E89F71;
   min-width: 245px;
 }
+.products__more._hold {
+  opacity: 0.2;
+  cursor: default;
+}
 
 .item-product {
   display: flex;
@@ -1531,6 +1535,10 @@ img {
 }
 .actions-product__button:not(:last-child) {
   margin-bottom: 24px;
+}
+.actions-product__button._hold {
+  opacity: 0.2;
+  cursor: default;
 }
 .actions-product__link {
   display: flex;

@@ -13,6 +13,10 @@
 		&:not(:last-child) {
 			margin-bottom: 24px;
 		}
+		&._hold {
+			opacity: 0.2;
+			cursor: default;
+		}
 	}
 	&__link {
 		display: flex;

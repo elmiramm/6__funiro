@@ -32,6 +32,10 @@
 	&__more {
 		border: 1px solid $orangeColorPrimary;
 		min-width: 245px;
+		&._hold {
+			opacity: 0.2;
+			cursor: default;
+		}
 	}
 	
 }
