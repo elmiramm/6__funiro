@@ -10,8 +10,9 @@ spoilers();
 
 // init Swiper:
 Swiper.use([Navigation, Pagination, Parallax]);
+
 if (document.querySelector('.slider-main__body')) {
-	const swiper = new Swiper('.slider-main__body', {
+	new Swiper('.slider-main__body', {
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
@@ -30,7 +31,30 @@ if (document.querySelector('.slider-main__body')) {
 			nextEl: '.slider-main .slider-arrow--next',
 			prevEl: '.slider-main .slider-arrow--prev',
 		},
-	})
+	});
+}
+if (document.querySelector('.slider-rooms__body')) {
+	new Swiper('.slider-rooms__body', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: "auto",
+		// loopedSlides: 5,
+		spaceBetween: 24,
+		speed: 800,
+		loop: true,
+		watchOverflow: true,
+		loopAdditionalSlides: 5,
+		preloadImage: false,
+		parallax: true,
+		pagination: {
+			el: '.slider-rooms__dots',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.slider-rooms .slider-arrow--next',
+			prevEl: '.slider-rooms .slider-arrow--prev',
+		},
+	});
 }
 
 window.onload = function () {

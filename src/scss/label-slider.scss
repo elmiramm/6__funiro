@@ -1,0 +1,15 @@
+.label-slider {
+	display: grid;
+	gap: 8px;
+	align-items: center;
+	justify-content: start;
+	grid-template-columns: auto 27px auto;
+	color: $mainColorGray1;
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
+	&__line {
+		height: 1px;
+		background-color: $mainColorGray1;
+	}
+}

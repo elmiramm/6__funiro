@@ -157,6 +157,9 @@ img {
 		font-size: 24px;
 	}
 }
+@import "rooms.scss";
+@import "slider-rooms.scss";
+@import "label-slider.scss";
 
 ._flyImage.ibg {
 	opacity: 1;

@@ -4,6 +4,7 @@
 	column-gap: 8px;
 }
 .slider-arrow {
+	pointer-events: auto;
 	height: 48px;
 	font-size: 16px;
 	color: $orangeColorPrimary;

@@ -1,0 +1,58 @@
+.rooms {
+	background-color: #FCF8F3;
+	padding-top: 44px;
+	padding-bottom: 44px;
+	@media (max-width: 991.98px) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	&__container {
+		@media(min-width: 991.98px) {
+			display: flex;
+		}
+	}
+	&__body {
+		flex: 0 0 465 / 1240 * 100%;
+		position: relative;
+		z-index: 5;
+		align-self: center;
+		@media (min-width: 991.98px) {
+			padding-right: 40px;
+		}
+		@media (min-width: 1100.98px) {
+			padding-right: 80px;
+		}
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+		text-align: left;
+	}
+
+	&__text {
+		line-height: 1.5;
+		font-weight: 500;
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__button {
+		background-color: $orangeColorPrimary;
+		color: #fff;
+		min-width: 180px;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgb(190, 130, 92);
+			}
+		}
+	}
+
+	&__slider {
+		flex: 1 1 auto;
+		min-width: 0;
+		align-self: flex-start;
+	}
+}
