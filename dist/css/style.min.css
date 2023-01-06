@@ -1575,7 +1575,7 @@ img {
   opacity: 1;
   position: fixed;
   z-index: 100;
-  transition: all 1.5s ease;
+  transition: all 1s ease;
 }
 
 .footer-title {
