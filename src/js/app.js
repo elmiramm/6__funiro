@@ -56,6 +56,40 @@ if (document.querySelector('.slider-rooms__body')) {
 		},
 	});
 }
+if (document.querySelector('.slider-tips__body')) {
+	new Swiper('.slider-tips__body', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 3,
+		spaceBetween: 32,
+		speed: 800,
+		loop: true,
+		watchOverflow: true,
+		pagination: {
+			el: '.slider-tips__dots',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.slider-tips .slider-arrow--next',
+			prevEl: '.slider-tips .slider-arrow--prev',
+		},
+		breakpoints: {
+			279: {
+				slidesPerView: 1.1,
+				spaceBetween: 15,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 32,
+			},
+		}
+	});
+}
+
 
 window.onload = function () {
 	document.addEventListener('click', documentActions);
