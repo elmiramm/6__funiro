@@ -1,0 +1,31 @@
+.row-furniture {
+	&--left-top {
+		justify-content: end;
+		align-items: end;
+	}
+	&--left-bottom {
+		justify-content: end;
+		align-items: start;
+	}
+	&--center {
+		display: block;
+	}
+	&--right-top {
+		align-items: end;
+	}
+	&--right-bootom {
+		align-items: start;
+	}
+	&__item {
+		@media (any-hover: hover) {
+			img {
+				transition: all 0.8s ease;
+				filter: grayscale(1);
+				&:hover {
+					filter: grayscale(0);
+				}
+			}
+			}
+			
+	}
+}

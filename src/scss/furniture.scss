@@ -1,0 +1,57 @@
+.furniture {
+	margin-bottom: 87px;
+	@media (max-width: 991.98px) {
+		margin-bottom: 40px;
+	}
+
+	&__label {
+		text-align: center;
+		font-size: 20px;
+		line-height: 1.5;
+		color: $darkGrayColorGray3;
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+	&__title {
+		margin-bottom: 32px;
+	}
+
+	&__body {
+		position: relative;
+		@media (any-hover: none) {
+			overflow: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: auto;
+		grid-auto-flow: column;
+		align-items: center;
+		gap: 16px;
+		@media (any-hover: hover) {
+			justify-content: center;
+		}
+	}
+	&__column {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 0 -8px;
+		&:first-child {
+			justify-content: flex-end;
+		}
+	}
+	&__row {
+		display: inline-grid;
+		padding: 0 8px;
+		gap: 16px;
+		grid-template-columns: auto;
+		grid-auto-flow: column;
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+}
